@@ -7,8 +7,8 @@ const mustBeEqual = <T>(x: T, y: T) => { // T means type generic
   console.log(`${x} is equal to ${y}`)
 }
 
-mustBeEqual(123, 123)
-mustBeEqual(123, 'abc')
+// mustBeEqual(123, 123)
+// mustBeEqual(123, 'abc')
 
 // dont create many functions with the same purpose
 const numMustBeEqual = (x: number, y: number) => {

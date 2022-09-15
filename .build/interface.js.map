@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../interface.ts"],
+  "sourcesContent": ["// Using Generica in interface\n\ninterface Data<T extends string | number>{ // type contraints\n  id: T;\n}\n\n// normal way\ninterface Data2 {\n  id: number;\n}\n\n// using in function\nconst filterById = <T extends string | number>(id: T, data: Data<T>[]) => {\n  return data.filter((x) => x.id !== id);\n}\n\nconst nData = [{ id: 123}, {id: 321}]\nconst sData = [{id: '123'}, {id: '321'}]\n\nconsole.log('yes',filterById(123, nData)[0].id)\nconsole.log(filterById('123', sData)[0].id)\n\n\n// this doesnt work, because of the type contraints\n// filterById({}, [{id: {}}])\n"],
+  "mappings": "AAYA,MAAM,aAAa,CAA4B,IAAO,SAAoB;AACxE,SAAO,KAAK,OAAO,CAAC,MAAM,EAAE,OAAO;AAAA;AAGrC,MAAM,QAAQ,CAAC,EAAE,IAAI,OAAM,EAAC,IAAI;AAChC,MAAM,QAAQ,CAAC,EAAC,IAAI,SAAQ,EAAC,IAAI;AAEjC,QAAQ,IAAI,OAAM,WAAW,KAAK,OAAO,GAAG;AAC5C,QAAQ,IAAI,WAAW,OAAO,OAAO,GAAG;",
+  "names": []
+}
