@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../index.ts"],
-  "sourcesContent": ["// Create a function to assert that two numbers are the same\n// if not, throw an Error\nconst numMustBeEqual = (x: number, y: number) => {\n  if(x !== y) throw new Error (`${x} must be equal to ${y}`)\n}"],
-  "mappings": "AAEA,MAAM,iBAAiB,CAAC,GAAW,MAAc;AAC/C,MAAG,MAAM;AAAG,UAAM,IAAI,MAAO,GAAG,sBAAsB;AAAA;",
+  "sourcesContent": ["// Create a function to assert that two numbers are the same\n// if not, throw an Error\n\n// Generics Function \nconst mustBeEqual = <T>(x: T, y: T) => { // T means type generic\n  if(x !== y) throw new Error (`${x} must be equal to ${y}`)\n  console.log(`${x} is equal to ${y}`)\n}\n\nmustBeEqual(123, 123)\nmustBeEqual(123, 'abc')\n\n// dont create many functions with the same purpose\nconst numMustBeEqual = (x: number, y: number) => {\n  if(x !== y) throw new Error (`${x} must be equal to ${y}`)\n}\n\nconst strMustBeEqual = (x: string, y: string) => {\n  if(x !== y) throw new Error (`${x} must be equal to ${y}`)\n}\n\n// this will compare the type\nconst anyMustBeEqual = (x: any, y: any) => {\n  if(x !== y) throw new Error (`${x} must be equal to ${y}`)\n}\n\n// anyMustBeEqual(123, 'abc')"],
+  "mappings": "AAIA,MAAM,cAAc,CAAI,GAAM,MAAS;AACrC,MAAG,MAAM;AAAG,UAAM,IAAI,MAAO,GAAG,sBAAsB;AACtD,UAAQ,IAAI,GAAG,iBAAiB;AAAA;AAGlC,YAAY,KAAK;AACjB,YAAY,KAAK;AAGjB,MAAM,iBAAiB,CAAC,GAAW,MAAc;AAC/C,MAAG,MAAM;AAAG,UAAM,IAAI,MAAO,GAAG,sBAAsB;AAAA;AAGxD,MAAM,iBAAiB,CAAC,GAAW,MAAc;AAC/C,MAAG,MAAM;AAAG,UAAM,IAAI,MAAO,GAAG,sBAAsB;AAAA;AAIxD,MAAM,iBAAiB,CAAC,GAAQ,MAAW;AACzC,MAAG,MAAM;AAAG,UAAM,IAAI,MAAO,GAAG,sBAAsB;AAAA;",
   "names": []
 }
